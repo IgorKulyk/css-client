@@ -1,0 +1,47 @@
+{
+  "short_name": "CSS Bats Extension",
+  "name": "Car Ship Simple Bats Extension",
+  "manifest_version": 3,
+  "version": "1.0.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Open login popup",
+    "default_icon": "./pngtree-bat-solid-icon-png-image_1768185.png"
+  },
+  "minimum_chrome_version": "93",
+  "background": {
+    "service_worker": "./background.js"
+  },
+  "icons": {
+    "16": "./pngtree-bat-solid-icon-png-image_1768185.png",
+    "32": "./pngtree-bat-solid-icon-png-image_1768185.png",
+    "48": "./pngtree-bat-solid-icon-png-image_1768185.png",
+    "128": "./pngtree-bat-solid-icon-png-image_1768185.png"
+  },
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "system.cpu",
+    "system.memory",
+    "system.storage",
+    "system.display",
+    "tabs",
+    "scripting",
+    "unlimitedStorage"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self'"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.jtracker.com/*",
+        "https://www.batscrm.com/*",
+        "https://www.centraldispatch.com/*"
+      ],
+      "js": ["./content-script.js"],
+      "css": ["./content-style.css"]
+    }
+  ]
+}
