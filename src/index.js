@@ -8,27 +8,6 @@ const form = document.querySelector(".login-form");
 const username = document.querySelector("#username");
 const password = document.querySelector("#password");
 
-const pdf_test = [];
-
-[
-  {
-    key: 1,
-    value: "New Customer Arrangement Sonic",
-  },
-  {
-    key: 5,
-    value: "Order Receipt Sonic",
-  },
-  {
-    key: 7,
-    value: "Order form Sonic w/o Card",
-  },
-  {
-    key: 12,
-    value: "Sonic First Page The Final Rate Confirmation",
-  },
-];
-
 const login = async (user_data) => {
   try {
     const response = await axios.post(`${api_url}/login`, user_data);
