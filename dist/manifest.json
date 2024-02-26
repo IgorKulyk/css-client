@@ -2,7 +2,7 @@
   "short_name": "CSS Bats Extension",
   "name": "Car Ship Simple Bats Extension",
   "manifest_version": 3,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "action": {
     "default_popup": "index.html",
     "default_title": "Open login popup",

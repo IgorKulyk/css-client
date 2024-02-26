@@ -1434,7 +1434,10 @@ class Content {
               let first = null;
               let orderId = null;
               try {
-                first = document.getElementsByTagName("script")[0];
+                //Changed location of script in array.
+                //Probably some update on frontend of batscrm changed location of script
+                // first = document.getElementsByTagName("script")[0];
+                first = document.getElementsByTagName("script")[3];
                 orderId = first.innerHTML.split("'")[1].split("=")[4];
               } catch (e) {
                 first = document.getElementsByTagName("script")[1];
