@@ -126,7 +126,7 @@ class Content {
     // false = Running
     // true = Not Running
     return (
-      `https://www.centraldispatch.com/protected/listing/post-listing?` +
+      `https://site.centraldispatch.com/protected/listing/post-listing?` +
       `originZip=${originZip}&` +
       `destinationZip=${destinationZip}&` +
       `ymmVehicleType=${typesVeh.join(",")}&` +
@@ -1250,10 +1250,10 @@ class Content {
 
         pdf = JSON.parse(result?.pdf);
 
-        if (this.host === "www.centraldispatch.com") {
+        if (this.host === "site.centraldispatch.com") {
           if (
             window.location.href.split("?")[0] ===
-            "https://www.centraldispatch.com/protected/listing/post-listing"
+            "https://site.centraldispatch.com/protected/listing/post-listing"
           ) {
             setTimeout(() => {
               const url = new URL(window.location.href);
@@ -1268,7 +1268,7 @@ class Content {
 
               const hash = document.getElementById("b_t").value;
               window.location.href =
-                "https://www.centraldispatch.com/protected/cargo/sample-prices-lightbox?" +
+                "https://site.centraldispatch.com/protected/cargo/sample-prices-lightbox?" +
                 `num_vehicles=${ymmVehicleType.length}&` +
                 `ozip=${originZip}&dzip=${destinationZip}` +
                 `&enclosed=0` +

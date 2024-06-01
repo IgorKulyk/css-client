@@ -2,7 +2,7 @@
   "short_name": "CSS Bats Extension",
   "name": "Car Ship Simple Bats Extension",
   "manifest_version": 3,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "action": {
     "default_popup": "index.html",
     "default_title": "Open login popup",
@@ -38,7 +38,8 @@
       "matches": [
         "https://www.jtracker.com/*",
         "https://www.batscrm.com/*",
-        "https://www.centraldispatch.com/*"
+        "https://www.centraldispatch.com/*",
+        "https://site.centraldispatch.com/*"
       ],
       "js": ["./content-script.js"],
       "css": ["./content-style.css"]
